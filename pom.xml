@@ -10,16 +10,19 @@
     <packaging>war</packaging> 
 
     <build> 
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.1</version>
+        <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>${tomcat7-maven-plugin.version}</version>
                 <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <url>http://12.7.108.141:8081/my_app</url>
+                    <server>tomcat</server>
+                    <username>admin1</username>
+                    <password>admin1</password>
+                    <path>/${project.artifactId}</path>
+                    <update>true</update>
                 </configuration>
-            </plugin>
-        </plugins>
+        </plugin>
     </build>
     
 </project>

@@ -8,8 +8,7 @@
     <artifactId>my_app</artifactId>
     <version>1.0-SNAPSHOT</version>
     
-    <build>
-        <directory>${project.basedir}/target</directory>
+    <build> 
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

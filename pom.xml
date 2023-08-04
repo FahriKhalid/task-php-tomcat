@@ -10,7 +10,7 @@
     <packaging>war</packaging> 
 
     <build> 
-        <plugin>
+        <plugins>
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>${tomcat7-maven-plugin.version}</version>
@@ -22,7 +22,7 @@
                     <path>/${project.artifactId}</path>
                     <update>true</update>
                 </configuration>
-        </plugin>
+        </plugins>
     </build>
     
 </project>

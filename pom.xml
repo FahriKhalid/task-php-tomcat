@@ -13,10 +13,8 @@
 
 	<name>maven-php:${project.version}</name>
 
-	<description>
-        A Maven plugin for dependency management and quality assurance in PHP projects. Uses
-        the default Maven lifecycle to provide multiple php features.
-    </description>
+	<description>A Maven plugin for dependency management and quality assurance in PHP projects. Uses the default Maven lifecycle to provide multiple php features.</description>
+
 
 	<scm>
 		<connection>scm:git:git://github.com/hypery2k/php-maven.git</connection>

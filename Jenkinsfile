@@ -18,9 +18,10 @@ pipeline {
                     remote.port = staging_port
 
                     sh '''
-                        for fileName in `find ${WORKSPACE} -type f -mmin -10 | grep -v ".git" | grep -v "Jenkinsfile"`
+                        cd ${WORKSPACE}
+                        find . -type f -mmin -10 -not -path "./.git/*" -not -name "Jenkinsfile" | while read fileName
                         do
-                            fil=$(echo ${fileName} | sed "s:${WORKSPACE}/::")
+                            fil=$(echo ${fileName} | sed 's:${WORKSPACE}/::')
                             scp -r ${fileName} ${remote.user}@${remote.host}:/var/www/html${fil}
                         done
                     '''
